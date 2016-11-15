@@ -1,0 +1,184 @@
+#N canvas 114 30 697 791 10;
+#N canvas 613 106 603 595 simple_note 0;
+#X obj 56 124 mtof;
+#X obj 69 152 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 183 368 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 57 188 osc~;
+#X obj 56 98 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 382 298 snapshot~;
+#X floatatom 382 321 0 0 0 0 - - -;
+#X obj 382 269 metro 100;
+#X obj 382 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 319 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 378 345 Watch the amplitude of the signal;
+#X text 344 169 trigger a note;
+#X text 119 99 Set the pitch (midi integer);
+#X text 32 21 [ SIMPLE_NOTE.PD ] Abstraction to show a simple enveloped
+oscillator.;
+#X obj 56 66 inlet;
+#X obj 319 69 inlet;
+#X obj 100 330 inlet;
+#X obj 100 381 nbx 5 14 0 1 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 100 410 *;
+#X obj 57 512 *~;
+#X obj 109 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 100 464 line~;
+#X msg 100 439 \$1 100;
+#X obj 183 330 inlet;
+#X text 207 368 Watch the amplitude of the signal;
+#X obj 57 540 outlet~;
+#X obj 57 222 note 300 400;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 2 0 18 1;
+#X connect 2 0 20 0;
+#X connect 3 0 26 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 26 1;
+#X connect 14 0 4 0;
+#X connect 15 0 9 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 22 0;
+#X connect 19 0 25 0;
+#X connect 20 0 17 0;
+#X connect 21 0 19 1;
+#X connect 22 0 21 0;
+#X connect 23 0 2 0;
+#X connect 26 0 5 0;
+#X connect 26 0 19 0;
+#X restore 33 249 pd simple_note;
+#X obj 33 97 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X text 94 97 1 Set the pitch (midi integer);
+#X obj 114 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 63 133 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 60 151 / 127;
+#X obj 60 171 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X text 139 224 4 Trigger a note;
+#X obj 87 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 110 195 3 Turn on (1) or off (2) output;
+#X text 200 132 2 Set volume;
+#N canvas 613 106 715 573 simple_note 0;
+#X obj 56 124 mtof;
+#X obj 69 152 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 57 540 dac~;
+#X obj 183 368 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 57 188 osc~;
+#X obj 56 98 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 382 298 snapshot~;
+#X floatatom 382 321 0 0 0 0 - - -;
+#X obj 382 269 metro 100;
+#X obj 382 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 319 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 378 345 Watch the amplitude of the signal;
+#X text 344 169 trigger a note;
+#X text 119 99 Set the pitch (midi integer);
+#X text 32 21 [ SIMPLE_NOTE.PD ] Abstraction to show a simple enveloped
+oscillator.;
+#X obj 56 66 inlet;
+#X obj 319 69 inlet;
+#X obj 100 330 inlet;
+#X obj 100 381 nbx 5 14 0 1 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 100 410 *;
+#X obj 57 512 *~;
+#X obj 109 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 100 464 line~;
+#X msg 100 439 \$1 100;
+#X obj 183 330 inlet;
+#X text 207 368 Watch the amplitude of the signal;
+#X obj 287 503 phasor~;
+#X text 345 502 sawtooth wave (use instead of osc~ for a different
+sound);
+#X obj 57 222 note 200 400;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 3 0 19 1;
+#X connect 3 0 21 0;
+#X connect 4 0 28 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 0;
+#X connect 10 0 28 1;
+#X connect 15 0 5 0;
+#X connect 16 0 10 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 23 0;
+#X connect 20 0 2 0;
+#X connect 20 0 2 1;
+#X connect 21 0 18 0;
+#X connect 22 0 20 1;
+#X connect 23 0 22 0;
+#X connect 24 0 3 0;
+#X connect 28 0 6 0;
+#X connect 28 0 20 0;
+#X restore 38 462 pd simple_note;
+#X obj 249 366 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X text 310 366 1 Set the pitch (midi integer);
+#X obj 251 543 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 252 411 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 249 429 / 127;
+#X obj 249 449 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X text 276 543 4 Trigger a note;
+#X obj 250 495 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 273 495 3 Turn on (1) or off (2) output;
+#X obj 249 385 send pitch;
+#X obj 249 471 send volume;
+#X obj 250 516 send on_off;
+#X obj 251 566 send play_note;
+#X obj 38 366 receive pitch;
+#X obj 65 389 receive volume;
+#X obj 92 412 receive on_off;
+#X obj 119 435 receive play_note;
+#X obj 22 738 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 172 711 receive pentatonic_frequency;
+#X obj 172 738 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 22 711 receive pentatonic_pitch;
+#X connect 1 0 0 0;
+#X connect 3 0 0 3;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 1;
+#X connect 8 0 0 2;
+#X connect 12 0 21 0;
+#X connect 14 0 24 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 22 0;
+#X connect 19 0 23 0;
+#X connect 25 0 11 0;
+#X connect 26 0 11 1;
+#X connect 27 0 11 2;
+#X connect 28 0 11 3;
+#X connect 30 0 31 0;
+#X connect 32 0 29 0;

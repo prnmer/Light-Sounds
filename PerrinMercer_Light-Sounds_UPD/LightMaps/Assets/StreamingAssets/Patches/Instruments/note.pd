@@ -1,0 +1,42 @@
+#N canvas 211 181 499 538 10;
+#X obj 218 417 line~;
+#X obj 67 478 *~;
+#X text 55 71 audio input;
+#X obj 67 95 inlet~;
+#X obj 218 96 inlet;
+#X text 211 73 play note;
+#X obj 218 192 int \$1;
+#X obj 218 144 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 218 373 1 \$1;
+#X obj 290 245 pipe;
+#X msg 290 373 0 \$1;
+#X obj 67 512 outlet~;
+#X obj 290 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 290 314 int \$2;
+#X obj 290 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 344 313 Second argument;
+#X text 122 193 First argument;
+#X text 25 5 [ NOTE.PD ] This note abstraction takes two arguments.
+Arg 1 is the attack time in milliseconds for your note. Arg 2 is the
+decay time in milliseconds.;
+#X floatatom 229 235 5 0 0 0 - - -, f 5;
+#X floatatom 345 340 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 1;
+#X connect 1 0 11 0;
+#X connect 3 0 1 0;
+#X connect 4 0 7 0;
+#X connect 6 0 8 0;
+#X connect 6 0 9 1;
+#X connect 6 0 18 0;
+#X connect 7 0 6 0;
+#X connect 7 0 12 0;
+#X connect 8 0 0 0;
+#X connect 9 0 14 0;
+#X connect 10 0 0 0;
+#X connect 12 0 9 0;
+#X connect 13 0 10 0;
+#X connect 13 0 19 0;
+#X connect 14 0 13 0;

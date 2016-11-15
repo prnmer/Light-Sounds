@@ -1,0 +1,21 @@
+#N canvas 145 177 547 300 10;
+#X declare -path ../Data -path ../Effects -path ../Misc -path ../Signal
+-path ../Sources -path ../Unity;
+#X obj 22 267 outlet~ left;
+#X obj 139 267 outlet~ right;
+#X obj 22 13 declare -path ../Data -path ../Effects -path ../Misc -path
+../Signal -path ../Sources -path ../Unity;
+#X obj 22 46 inlet patterns;
+#X obj 286 46 inlet messages;
+#X obj 286 66 route Play Stop Step Sleep;
+#X text 21 -8 Input:;
+#X obj 51 190 UnityNotePlayer;
+#X obj 42 84 unpack f f f;
+#X obj 142 141 t a;
+#X connect 4 0 5 0;
+#X connect 7 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 7 0;
+#X connect 8 1 7 1;
+#X connect 8 2 9 0;
+#X connect 9 0 7 2;
